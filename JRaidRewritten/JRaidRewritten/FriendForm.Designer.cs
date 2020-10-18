@@ -43,6 +43,7 @@ namespace JRaidRewritten
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(161, 26);
             this.textBox1.TabIndex = 9;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -52,6 +53,7 @@ namespace JRaidRewritten
             this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.TabIndex = 8;
             this.label2.Text = "UserId";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button1
             // 
@@ -74,6 +76,7 @@ namespace JRaidRewritten
             0,
             0,
             0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label1
             // 
@@ -83,6 +86,7 @@ namespace JRaidRewritten
             this.label1.Size = new System.Drawing.Size(67, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "Threads";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // FriendForm
             // 
@@ -96,6 +100,7 @@ namespace JRaidRewritten
             this.Controls.Add(this.label1);
             this.Name = "FriendForm";
             this.Text = "FriendForm";
+            this.Load += new System.EventHandler(this.FriendForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -37,6 +37,7 @@ namespace JRaidRewritten
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.SettingstoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +65,7 @@ namespace JRaidRewritten
             // 
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SettingstoolStripMenuItem,
             this.FriendFloodtoolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -74,7 +76,7 @@ namespace JRaidRewritten
             // FriendFloodtoolStripMenuItem
             // 
             this.FriendFloodtoolStripMenuItem.Name = "FriendFloodtoolStripMenuItem";
-            this.FriendFloodtoolStripMenuItem.Size = new System.Drawing.Size(214, 34);
+            this.FriendFloodtoolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.FriendFloodtoolStripMenuItem.Text = "Friend Flood";
             this.FriendFloodtoolStripMenuItem.Click += new System.EventHandler(this.FriendFloodtoolStripMenuItem_Click);
             // 
@@ -109,6 +111,13 @@ namespace JRaidRewritten
             this.listBox1.Size = new System.Drawing.Size(643, 319);
             this.listBox1.TabIndex = 10;
             // 
+            // SettingstoolStripMenuItem
+            // 
+            this.SettingstoolStripMenuItem.Name = "SettingstoolStripMenuItem";
+            this.SettingstoolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.SettingstoolStripMenuItem.Text = "Settings";
+            this.SettingstoolStripMenuItem.Click += new System.EventHandler(this.SettingstoolStripMenuItem_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -138,5 +147,6 @@ namespace JRaidRewritten
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ToolStripMenuItem SettingstoolStripMenuItem;
     }
 }

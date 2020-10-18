@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using JRaidRewritten.Extensions;
 using Discord;
 using System.Diagnostics;
+using Leaf.xNet;
 
 namespace JRaidRewritten
 {
@@ -20,6 +21,12 @@ namespace JRaidRewritten
         private ToolStripStatusLabel Status;
         private ListBox Logs;
         private int Index;
+
+        //Proxy Settings
+        private string Host;
+        private int Port;
+        private string Username;
+        private string Password;
         public Main()
         {
             InitializeComponent();
@@ -41,16 +48,16 @@ namespace JRaidRewritten
 
         private void FriendFloodtoolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (FriendForm FormStart = new FriendForm())
+            using (FriendForm FriendForm = new FriendForm())
             {
-                FormStart.ShowDialog();
-                if (FormStart.Start)
+                FriendForm.ShowDialog();
+                if (FriendForm.Start)
                 {
                     Status = toolStripStatusLabel1;
                     Logs = listBox1;
                     Index = 0;
 
-                    Start(FormStart.ThreadsAmount, FormStart.Username, FormStart.FriendFlood);
+                    Start(FriendForm.ThreadsAmount, FriendForm.UserId, FriendForm.FriendFlood);
                 }
             }
         }
@@ -83,7 +90,7 @@ namespace JRaidRewritten
             {
                 try
                 {
-                    DiscordClient DiscordClient = null;
+                    DiscordClient DiscordClient = new DiscordClient(new DiscordConfig() { Proxy = new AnarchyProxy() { Host = Host, Port = Port, Username = Username, Password = Password, Type = AnarchyProxyType.HTTP} }); 
 
                     lock (Accounts)
                     {
@@ -114,6 +121,24 @@ namespace JRaidRewritten
         private void Main_Load(object sender, EventArgs e)
         {
             LoadAccounts();
+        }
+
+        private void SettingstoolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (Settings Settings = new Settings())
+            {
+                Settings.ShowDialog();
+                if (Settings.Save)
+                {
+                    Status = toolStripStatusLabel1;
+                    Logs = listBox1;
+                    Index = 0;
+                    Host = Settings.IP;
+                    Port = Settings.Port;
+                    Username = Settings.Username;
+                    Password = Settings.Password;
+                }
+            }
         }
     }
 }
