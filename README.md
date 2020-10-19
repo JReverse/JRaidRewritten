@@ -15,12 +15,14 @@ JRaidRewritten is powered by Anarchy This means for some reason if that gets pat
 - VC Spammer
 - Avatar changer
 - Name Changer
+- Guild Leaver
 
 # Current Features
 - Latest Discord API
 - Extended Logging
 - Async
 - Friend Flood
+- Proxy Support
 
 # Devolepment roadmap [❌] = In progress [✔️] = Done
 - UI [✔️]
@@ -28,6 +30,9 @@ JRaidRewritten is powered by Anarchy This means for some reason if that gets pat
 - Async [✔️]
 - Latest Discord API [✔️]
 - Friend Flood [✔️]
+- Proxy Support [✔️]
+- Guild Joiner [✔️]
+=======
 - Proxy Support [❌]
 - Call Spam [❌]
 - DM Spam [❌]
@@ -36,6 +41,7 @@ JRaidRewritten is powered by Anarchy This means for some reason if that gets pat
 - VC Spammer [❌]
 - Avatar changer [❌]
 - Name Changer [❌]
+- Guild Leaver [❌]
 
 # Credits
 - https://github.com/not-ilinked/Anarchy (Anarchy Libary) (Dev Branch Used)
