@@ -22,6 +22,7 @@ JRaidRewritten is powered by Anarchy This means for some reason if that gets pat
 - Async
 - Friend Flood
 - Proxy Support
+- Guild Joiner
 
 # Devolepment roadmap [❌] = In progress [✔️] = Done
 - UI [✔️]
@@ -31,7 +32,7 @@ JRaidRewritten is powered by Anarchy This means for some reason if that gets pat
 - Friend Flood [✔️]
 - Proxy Support [✔️]
 - Guild Joiner [✔️]
-- Proxy Support [✔️]
+- Proxy Support [✔️] 
 - Call Spam [❌]
 - DM Spam [❌]
 - Invite Spam [❌]
