@@ -33,11 +33,12 @@ namespace JRaidRewritten
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.SettingstoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FriendFloodtoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.SettingstoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.GuildJoinertoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,12 +67,21 @@ namespace JRaidRewritten
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SettingstoolStripMenuItem,
-            this.FriendFloodtoolStripMenuItem});
+            this.FriendFloodtoolStripMenuItem,
+            this.GuildJoinertoolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(94, 29);
+            this.toolStripDropDownButton1.ShowDropDownArrow = false;
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(80, 29);
             this.toolStripDropDownButton1.Text = "Options";
+            // 
+            // SettingstoolStripMenuItem
+            // 
+            this.SettingstoolStripMenuItem.Name = "SettingstoolStripMenuItem";
+            this.SettingstoolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.SettingstoolStripMenuItem.Text = "Settings";
+            this.SettingstoolStripMenuItem.Click += new System.EventHandler(this.SettingstoolStripMenuItem_Click);
             // 
             // FriendFloodtoolStripMenuItem
             // 
@@ -111,12 +121,12 @@ namespace JRaidRewritten
             this.listBox1.Size = new System.Drawing.Size(643, 319);
             this.listBox1.TabIndex = 10;
             // 
-            // SettingstoolStripMenuItem
+            // GuildJoinertoolStripMenuItem
             // 
-            this.SettingstoolStripMenuItem.Name = "SettingstoolStripMenuItem";
-            this.SettingstoolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.SettingstoolStripMenuItem.Text = "Settings";
-            this.SettingstoolStripMenuItem.Click += new System.EventHandler(this.SettingstoolStripMenuItem_Click);
+            this.GuildJoinertoolStripMenuItem.Name = "GuildJoinertoolStripMenuItem";
+            this.GuildJoinertoolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.GuildJoinertoolStripMenuItem.Text = "Guild Joiner";
+            this.GuildJoinertoolStripMenuItem.Click += new System.EventHandler(this.GuildJoinertoolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -148,5 +158,6 @@ namespace JRaidRewritten
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ToolStripMenuItem SettingstoolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem GuildJoinertoolStripMenuItem;
     }
 }

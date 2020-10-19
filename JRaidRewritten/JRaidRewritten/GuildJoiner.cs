@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace JRaidRewritten
 {
-    public partial class FriendForm : Form
+    public partial class GuildJoiner : Form
     {
         public bool Start = false;
-        public ulong UserId;
+        public string Invite;
         public int ThreadsAmount;
-        public FriendForm()
+        public GuildJoiner()
         {
             InitializeComponent();
         }
@@ -24,31 +24,11 @@ namespace JRaidRewritten
         {
             Start = true;
             ThreadsAmount = (int)numericUpDown1.Value;
-            UserId = Convert.ToUInt64(textBox1.Text.Trim());
+            Invite = textBox1.Text.Trim();
             this.Close();
         }
 
-        private void FriendForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
+        private void GuildJoiner_Load(object sender, EventArgs e)
         {
 
         }

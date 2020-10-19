@@ -60,6 +60,12 @@
     <Compile Include="FriendForm.Designer.cs">
       <DependentUpon>FriendForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GuildJoiner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuildJoiner.Designer.cs">
+      <DependentUpon>GuildJoiner.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     </Compile>
     <EmbeddedResource Include="FriendForm.resx">
       <DependentUpon>FriendForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuildJoiner.resx">
+      <DependentUpon>GuildJoiner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
