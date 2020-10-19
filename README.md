@@ -14,6 +14,8 @@ JRaidRewritten is powered by Anarchy This means for some reason if that gets pat
 - VC Spammer
 - Avatar changer
 - Name Changer
+- Guild Joiner
+- Guild Leaver
 
 # Current Features
 - Latest Discord API
@@ -36,6 +38,8 @@ JRaidRewritten is powered by Anarchy This means for some reason if that gets pat
 - VC Spammer [❌]
 - Avatar changer [❌]
 - Name Changer [❌]
+- Guild Joiner [❌]
+- Guild Leaver [❌]
 
 # Credits
 - https://github.com/not-ilinked/Anarchy (Anarchy Libary) (Dev Branch Used)
