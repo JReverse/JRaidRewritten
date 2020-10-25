@@ -23,6 +23,7 @@ JRaidRewritten is powered by Anarchy This means for some reason if that gets pat
 - Friend Flood
 - Proxy Support
 - Guild Joiner
+- MultiThreading
 
 # Devolepment roadmap [❌] = In progress [✔️] = Done
 - UI [✔️]
@@ -33,6 +34,7 @@ JRaidRewritten is powered by Anarchy This means for some reason if that gets pat
 - Proxy Support [✔️]
 - Guild Joiner [✔️]
 - Proxy Support [✔️]
+- MultiThreading [✔️]
 - Call Spam [❌]
 - DM Spam [❌]
 - Invite Spam [❌]
@@ -45,3 +47,7 @@ JRaidRewritten is powered by Anarchy This means for some reason if that gets pat
 # Credits
 - https://github.com/not-ilinked/Anarchy (Anarchy Libary) (Dev Branch Used)
 - https://github.com/JReverse (Program)
+
+# Trusted Shops For Tokens
+- https://sellix.io/RANKTW (HQ)
+- https://www.shop.xyliase.com/ (MQ/LQ)
