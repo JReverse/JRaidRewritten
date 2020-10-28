@@ -48,5 +48,5 @@ JRaidRewritten is powered by Anarchy This means for some reason if that gets pat
 - Message Image/Video/File Spam [❌]
 
 # Credits
-- https://github.com/not-ilinked/Anarchy (Anarchy Libary) (Dev Branch Used)
+- https://github.com/not-ilinked/Anarchy (Anarchy Libary) (Main Branch Used)
 - https://github.com/JReverse (Program)
