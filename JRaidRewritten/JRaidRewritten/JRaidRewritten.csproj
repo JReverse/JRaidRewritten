@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DMSpam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMSpam.Designer.cs">
+      <DependentUpon>DMSpam.cs</DependentUpon>
+    </Compile>
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="FriendForm.cs">
       <SubType>Form</SubType>
@@ -66,11 +72,23 @@
     <Compile Include="GuildJoiner.Designer.cs">
       <DependentUpon>GuildJoiner.cs</DependentUpon>
     </Compile>
+    <Compile Include="GuildLeaver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuildLeaver.Designer.cs">
+      <DependentUpon>GuildLeaver.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageFlood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageFlood.Designer.cs">
+      <DependentUpon>MessageFlood.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,14 +98,23 @@
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DMSpam.resx">
+      <DependentUpon>DMSpam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FriendForm.resx">
       <DependentUpon>FriendForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GuildJoiner.resx">
       <DependentUpon>GuildJoiner.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GuildLeaver.resx">
+      <DependentUpon>GuildLeaver.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageFlood.resx">
+      <DependentUpon>MessageFlood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -10,12 +10,14 @@ using System.Windows.Forms;
 
 namespace JRaidRewritten
 {
-    public partial class GuildJoiner : Form
+    public partial class MessageFlood : Form
     {
         public bool Start = false;
-        public string Invite;
+        public string Message;
         public int ThreadsAmount;
-        public GuildJoiner()
+        public ulong ChannelID;
+        public bool TTS;
+        public MessageFlood()
         {
             InitializeComponent();
         }
@@ -24,31 +26,13 @@ namespace JRaidRewritten
         {
             Start = true;
             ThreadsAmount = (int)numericUpDown1.Value;
-            Invite = textBox1.Text.Trim();
+            Message = textBox1.Text.Trim();
+            ChannelID = Convert.ToUInt64(textBox2.Text.Trim());
+            TTS = checkBox1.Checked;
             this.Close();
         }
 
-        private void GuildJoiner_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        private void MessageFlood_Load(object sender, EventArgs e)
         {
 
         }
