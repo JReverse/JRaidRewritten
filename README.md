@@ -25,6 +25,7 @@ JRaidRewritten is powered by Anarchy This means for some reason if that gets pat
 - DM Spam
 - Message Spam
 - Guild Leaver
+- MultiThreading
 
 # Devolepment roadmap [❌] = In progress [✔️] = Done
 - UI [✔️]
@@ -50,3 +51,7 @@ JRaidRewritten is powered by Anarchy This means for some reason if that gets pat
 # Credits
 - https://github.com/not-ilinked/Anarchy (Anarchy Libary) (Main Branch Used)
 - https://github.com/JReverse (Program)
+
+# Trusted Shops For Tokens
+- https://sellix.io/RANKTW (HQ)
+- https://www.shop.xyliase.com/ (MQ/LQ)
