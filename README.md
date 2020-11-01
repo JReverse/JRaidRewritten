@@ -8,13 +8,12 @@ JRaidRewritten is powered by Anarchy This means for some reason if that gets pat
 
 # Some features i plan to add
 - Call Spam
-- DM Spam
 - Invite Spam
-- Message Spam
 - VC Spammer
 - Avatar changer
 - Name Changer
-- Guild Leaver
+- DM Image/Video/File Spam
+- Message Image/Video/File Spam
 
 # Current Features
 - Latest Discord API
@@ -23,6 +22,9 @@ JRaidRewritten is powered by Anarchy This means for some reason if that gets pat
 - Friend Flood
 - Proxy Support
 - Guild Joiner
+- DM Spam
+- Message Spam
+- Guild Leaver
 - MultiThreading
 
 # Devolepment roadmap [❌] = In progress [✔️] = Done
@@ -33,19 +35,21 @@ JRaidRewritten is powered by Anarchy This means for some reason if that gets pat
 - Friend Flood [✔️]
 - Proxy Support [✔️]
 - Guild Joiner [✔️]
-- Proxy Support [✔️]
-- MultiThreading [✔️]
+- Proxy Support [✔️] 
+- Guild Leaver [✔️]
+- Message Spam [✔️]
+- DM Spam [✔️]
 - Call Spam [❌]
-- DM Spam [❌]
 - Invite Spam [❌]
-- Message Spam [❌]
 - VC Spammer [❌]
 - Avatar changer [❌]
 - Name Changer [❌]
 - Guild Leaver [❌]
+- DM Image/Video/File Spam [❌]
+- Message Image/Video/File Spam [❌]
 
 # Credits
-- https://github.com/not-ilinked/Anarchy (Anarchy Libary) (Dev Branch Used)
+- https://github.com/not-ilinked/Anarchy (Anarchy Libary) (Main Branch Used)
 - https://github.com/JReverse (Program)
 
 # Trusted Shops For Tokens

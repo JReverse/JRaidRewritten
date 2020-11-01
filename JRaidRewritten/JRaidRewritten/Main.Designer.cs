@@ -35,10 +35,13 @@ namespace JRaidRewritten
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.SettingstoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FriendFloodtoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.GuildJoinertoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.GuildJoinertoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.messageFloodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guildLeaverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dMFloodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -68,7 +71,10 @@ namespace JRaidRewritten
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SettingstoolStripMenuItem,
             this.FriendFloodtoolStripMenuItem,
-            this.GuildJoinertoolStripMenuItem});
+            this.GuildJoinertoolStripMenuItem,
+            this.messageFloodToolStripMenuItem,
+            this.guildLeaverToolStripMenuItem,
+            this.dMFloodToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
@@ -89,6 +95,13 @@ namespace JRaidRewritten
             this.FriendFloodtoolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.FriendFloodtoolStripMenuItem.Text = "Friend Flood";
             this.FriendFloodtoolStripMenuItem.Click += new System.EventHandler(this.FriendFloodtoolStripMenuItem_Click);
+            // 
+            // GuildJoinertoolStripMenuItem
+            // 
+            this.GuildJoinertoolStripMenuItem.Name = "GuildJoinertoolStripMenuItem";
+            this.GuildJoinertoolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.GuildJoinertoolStripMenuItem.Text = "Guild Joiner";
+            this.GuildJoinertoolStripMenuItem.Click += new System.EventHandler(this.GuildJoinertoolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -121,12 +134,26 @@ namespace JRaidRewritten
             this.listBox1.Size = new System.Drawing.Size(643, 319);
             this.listBox1.TabIndex = 10;
             // 
-            // GuildJoinertoolStripMenuItem
+            // messageFloodToolStripMenuItem
             // 
-            this.GuildJoinertoolStripMenuItem.Name = "GuildJoinertoolStripMenuItem";
-            this.GuildJoinertoolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.GuildJoinertoolStripMenuItem.Text = "Guild Joiner";
-            this.GuildJoinertoolStripMenuItem.Click += new System.EventHandler(this.GuildJoinertoolStripMenuItem_Click);
+            this.messageFloodToolStripMenuItem.Name = "messageFloodToolStripMenuItem";
+            this.messageFloodToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.messageFloodToolStripMenuItem.Text = "Message Flood";
+            this.messageFloodToolStripMenuItem.Click += new System.EventHandler(this.messageFloodToolStripMenuItem_Click);
+            // 
+            // guildLeaverToolStripMenuItem
+            // 
+            this.guildLeaverToolStripMenuItem.Name = "guildLeaverToolStripMenuItem";
+            this.guildLeaverToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.guildLeaverToolStripMenuItem.Text = "Guild Leaver";
+            this.guildLeaverToolStripMenuItem.Click += new System.EventHandler(this.guildLeaverToolStripMenuItem_Click);
+            // 
+            // dMFloodToolStripMenuItem
+            // 
+            this.dMFloodToolStripMenuItem.Name = "dMFloodToolStripMenuItem";
+            this.dMFloodToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.dMFloodToolStripMenuItem.Text = "DM Flood";
+            this.dMFloodToolStripMenuItem.Click += new System.EventHandler(this.dMFloodToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -159,5 +186,8 @@ namespace JRaidRewritten
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ToolStripMenuItem SettingstoolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem GuildJoinertoolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem messageFloodToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem guildLeaverToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dMFloodToolStripMenuItem;
     }
 }
