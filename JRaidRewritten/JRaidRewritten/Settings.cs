@@ -17,6 +17,7 @@ namespace JRaidRewritten
         public int Port;
         public string Username;
         public string Password;
+        public int Delay;
         public Settings()
         {
             InitializeComponent();
@@ -34,6 +35,7 @@ namespace JRaidRewritten
             Port = (int)numericUpDown1.Value;
             Username = textBox2.Text.Trim();
             Password = textBox3.Text.Trim();
+            Delay = (int)numericUpDown2.Value;
             this.Close();
         }
     }

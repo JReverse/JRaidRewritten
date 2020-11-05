@@ -33,12 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Anarchy">
-      <HintPath>..\..\..\..\Downloads\Anarchy-dev\Anarchy-dev\Anarchy\bin\Debug\Anarchy.dll</HintPath>
-    </Reference>
-    <Reference Include="Leaf.xNet, Version=5.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Anarchy, Version=0.8.0.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Downloads\Anarchy-dev\Anarchy-dev\Anarchy\bin\Debug\Leaf.xNet.dll</HintPath>
+      <HintPath>..\..\..\..\..\Downloads\Anarchy-master\Anarchy-master\Anarchy\bin\Debug\Anarchy.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

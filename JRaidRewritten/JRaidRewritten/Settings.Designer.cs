@@ -38,7 +38,10 @@ namespace JRaidRewritten
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -59,7 +62,7 @@ namespace JRaidRewritten
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 194);
+            this.button1.Location = new System.Drawing.Point(12, 244);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(288, 46);
             this.button1.TabIndex = 12;
@@ -120,11 +123,34 @@ namespace JRaidRewritten
             this.label4.TabIndex = 18;
             this.label4.Text = "Password";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 199);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 20);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Delay";
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(139, 199);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            65565,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(161, 26);
+            this.numericUpDown2.TabIndex = 20;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(316, 252);
+            this.ClientSize = new System.Drawing.Size(316, 302);
+            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox3);
@@ -138,6 +164,7 @@ namespace JRaidRewritten
             this.Text = "Settings";
             this.Load += new System.EventHandler(this.Settings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,5 +181,7 @@ namespace JRaidRewritten
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
     }
 }

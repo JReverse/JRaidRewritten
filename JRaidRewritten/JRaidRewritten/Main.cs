@@ -11,14 +11,13 @@ using System.Windows.Forms;
 using JRaidRewritten.Extensions;
 using Discord;
 using System.Diagnostics;
-using Leaf.xNet;
 using System.Data.SqlTypes;
 
 namespace JRaidRewritten
 {
     public partial class Main : Form
     {
-        private List<DiscordClient> Accounts;
+        private List<string> Accounts;
         private ToolStripStatusLabel Status;
         private ListBox Logs;
         private int Index;
@@ -28,20 +27,19 @@ namespace JRaidRewritten
         private int Port;
         private string Username;
         private string Password;
+        private int Delay { get; set; } = 555;
         public Main()
         {
             InitializeComponent();
         }
-
         private void LoadAccounts()
         {
-            Accounts = new List<DiscordClient>();
+            Accounts = new List<string>();
             var lines = File.ReadAllLines(Directory.GetCurrentDirectory() + "/Tokens.txt");
 
             foreach (string line in lines)
             {
-
-                Accounts.Add(new DiscordClient(line));
+                Accounts.Add(line);
             }
 
             toolStripStatusLabel1.SafeChangeText(string.Format("Accounts: {0}", Accounts.Count));
@@ -126,18 +124,21 @@ namespace JRaidRewritten
             {
                 try
                 {
-                    DiscordClient DiscordClient = new DiscordClient(new DiscordConfig() { Proxy = new AnarchyProxy() { Host = Host, Port = Port, Username = Username, Password = Password, Type = AnarchyProxyType.HTTP } });
+                    DiscordClient DiscordClient;
+                    if (Host != null) { DiscordClient = new DiscordClient(new DiscordConfig() { Proxy = new AnarchyProxy() { Host = Host, Port = Port, Username = Username, Password = Password, Type = AnarchyProxyType.HTTP } }); }
+                    DiscordClient = new DiscordClient();
 
                     lock (Accounts)
                     {
                         if (Index >= Accounts.Count)
                             break;
 
-                        DiscordClient = Accounts[Index];
+                        DiscordClient.Token = Accounts[Index];
                         Index += 1;
                     }
 
                     await DiscordClient.JoinGuildAsync(Invite);
+                    await Task.Delay(Delay);
                     Logs.SafeAddItem(string.Format("Joined Guild From: {0}", DiscordClient.User.Username));
 
                 }
@@ -157,18 +158,21 @@ namespace JRaidRewritten
             {
                 try
                 {
-                    DiscordClient DiscordClient = new DiscordClient(new DiscordConfig() { Proxy = new AnarchyProxy() { Host = Host, Port = Port, Username = Username, Password = Password, Type = AnarchyProxyType.HTTP } });
+                    DiscordClient DiscordClient;
+                    if (Host != null) { DiscordClient = new DiscordClient(new DiscordConfig() { Proxy = new AnarchyProxy() { Host = Host, Port = Port, Username = Username, Password = Password, Type = AnarchyProxyType.HTTP } }); }
+                    DiscordClient = new DiscordClient();
 
                     lock (Accounts)
                     {
                         if (Index >= Accounts.Count)
                             break;
 
-                        DiscordClient = Accounts[Index];
+                        DiscordClient.Token = Accounts[Index];
                         Index += 1;
                     }
 
                     await DiscordClient.LeaveGuildAsync(GuildID);
+                    await Task.Delay(Delay);
                     Logs.SafeAddItem(string.Format("Left Guild From: {0}", DiscordClient.User.Username));
 
                 }
@@ -226,18 +230,21 @@ namespace JRaidRewritten
             {
                 try
                 {
-                    DiscordClient DiscordClient = new DiscordClient(new DiscordConfig() { Proxy = new AnarchyProxy() { Host = Host, Port = Port, Username = Username, Password = Password, Type = AnarchyProxyType.HTTP } });
+                    DiscordClient DiscordClient;
+                    if (Host != null) { DiscordClient = new DiscordClient(new DiscordConfig() { Proxy = new AnarchyProxy() { Host = Host, Port = Port, Username = Username, Password = Password, Type = AnarchyProxyType.HTTP } }); }
+                    DiscordClient = new DiscordClient();
 
                     lock (Accounts)
                     {
                         if (Index >= Accounts.Count)
                             break;
 
-                        DiscordClient = Accounts[Index];
+                        DiscordClient.Token = Accounts[Index];
                         Index += 1;
                     }
                     var dm = await DiscordClient.CreateDMAsync(UserID);
                     await dm.SendMessageAsync(Message, false);
+                    await Task.Delay(Delay);
                     Logs.SafeAddItem(string.Format("Messaged User From: {0}", DiscordClient.User.Username));
 
                 }
@@ -257,18 +264,21 @@ namespace JRaidRewritten
             {
                 try
                 {
-                    DiscordClient DiscordClient = new DiscordClient(new DiscordConfig() { Proxy = new AnarchyProxy() { Host = Host, Port = Port, Username = Username, Password = Password, Type = AnarchyProxyType.HTTP } });
+                    DiscordClient DiscordClient;
+                    if (Host != null) { DiscordClient = new DiscordClient(new DiscordConfig() { Proxy = new AnarchyProxy() { Host = Host, Port = Port, Username = Username, Password = Password, Type = AnarchyProxyType.HTTP } }); }
+                    DiscordClient = new DiscordClient();
 
                     lock (Accounts)
                     {
                         if (Index >= Accounts.Count)
                             break;
 
-                        DiscordClient = Accounts[Index];
+                        DiscordClient.Token = Accounts[Index];
                         Index += 1;
                     }
 
                     await DiscordClient.SendMessageAsync(ChanngelID, Message, tts);
+                    await Task.Delay(Delay);
                     Logs.SafeAddItem(string.Format("Messaged Guild From: {0}", DiscordClient.User.Username));
 
                 }
@@ -288,18 +298,21 @@ namespace JRaidRewritten
             {
                 try
                 {
-                    DiscordClient DiscordClient = new DiscordClient(new DiscordConfig() { Proxy = new AnarchyProxy() { Host = Host, Port = Port, Username = Username, Password = Password, Type = AnarchyProxyType.HTTP } });
+                    DiscordClient DiscordClient;
+                    if (Host != null) { DiscordClient = new DiscordClient(new DiscordConfig() { Proxy = new AnarchyProxy() { Host = Host, Port = Port, Username = Username, Password = Password, Type = AnarchyProxyType.HTTP } }); }
+                    DiscordClient = new DiscordClient();
 
                     lock (Accounts)
                     {
                         if (Index >= Accounts.Count)
                             break;
 
-                        DiscordClient = Accounts[Index];
+                        DiscordClient.Token = Accounts[Index];
                         Index += 1;
                     }
 
                     await DiscordClient.SendFriendRequestAsync(UserId);
+                    await Task.Delay(Delay);
                     Logs.SafeAddItem(string.Format("Added User From: {0}", DiscordClient.User.Username));
 
                 }
@@ -333,6 +346,7 @@ namespace JRaidRewritten
                     Port = Settings.Port;
                     Username = Settings.Username;
                     Password = Settings.Password;
+                    Delay = Settings.Delay;
                 }
             }
         }
