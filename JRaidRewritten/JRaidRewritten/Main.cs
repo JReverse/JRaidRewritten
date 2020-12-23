@@ -76,7 +76,7 @@ namespace JRaidRewritten
 
                 Task.WaitAll(Threads.ToArray());
 
-                Status.SafeChangeText("Completed Frind Flood");
+                Status.SafeChangeText("Completed Friend Flood");
 
             });
         }
