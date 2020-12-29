@@ -35,7 +35,7 @@
   <ItemGroup>
     <Reference Include="Anarchy, Version=0.8.0.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Downloads\Anarchy-master\Anarchy-master\Anarchy\bin\Debug\Anarchy.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\Anarchy-master\Anarchy\bin\Debug\Anarchy.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CallSpam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CallSpam.Designer.cs">
+      <DependentUpon>CallSpam.cs</DependentUpon>
+    </Compile>
     <Compile Include="DMSpam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,15 @@
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="VCSpammer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VCSpammer.Designer.cs">
+      <DependentUpon>VCSpammer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CallSpam.resx">
+      <DependentUpon>CallSpam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DMSpam.resx">
       <DependentUpon>DMSpam.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +139,9 @@
     </Compile>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VCSpammer.resx">
+      <DependentUpon>VCSpammer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

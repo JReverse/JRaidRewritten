@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace JRaidRewritten
 {
-    public partial class GuildLeaver : Form
+    public partial class CallSpam : Form
     {
         public bool Start = false;
-        public ulong GuildID;
+        public ulong UserID;
         public int ThreadsAmount;
-        public GuildLeaver()
+        public CallSpam()
         {
             InitializeComponent();
         }
@@ -24,31 +24,11 @@ namespace JRaidRewritten
         {
             Start = true;
             ThreadsAmount = (int)numericUpDown1.Value;
-            GuildID = Convert.ToUInt64(textBox1.Text.Trim());
+            UserID = Convert.ToUInt64(textBox1.Text.Trim());
             this.Close();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GuildLeaver_Load(object sender, EventArgs e)
+        private void CallSpam_Load(object sender, EventArgs e)
         {
 
         }
