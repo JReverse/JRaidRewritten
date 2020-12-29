@@ -44,7 +44,6 @@ JRaidRewritten is powered by Anarchy This means for some reason if that gets pat
 - Invite Spam [❌]
 - Avatar changer [❌]
 - Name Changer [❌]
-- Guild Leaver [❌]
 - DM Image/Video/File Spam [❌]
 - Message Image/Video/File Spam [❌]
 
