@@ -18,6 +18,7 @@ namespace JRaidRewritten
         public ulong GuildID;
         public int ThreadsAmount;
         public Stream File;
+        public Stream Filez;
         public VCSpammer()
         {
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace JRaidRewritten
             {
                 try
                 {
-                    if ((File = FileDialog.OpenFile()) != null)
+                    if ((Filez = FileDialog.OpenFile()) != null)
                     {
                         using (File)
                         {
@@ -38,6 +39,7 @@ namespace JRaidRewritten
                             ThreadsAmount = (int)numericUpDown1.Value;
                             GuildID = Convert.ToUInt64(textBox2.Text.Trim());
                             VoiceChannelID = Convert.ToUInt64(textBox1.Text.Trim());
+                            File = Filez;
                             this.Close();
                         }
                     }

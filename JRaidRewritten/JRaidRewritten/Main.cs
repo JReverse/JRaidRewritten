@@ -410,14 +410,8 @@ namespace JRaidRewritten
             {
                 try
                 {
-
-                    /*
-                    DiscordSocketClient client = new DiscordSocketClient(new DiscordSocketConfig()
-                    {
-                        Intents = DiscordGatewayIntent.Guilds | DiscordGatewayIntent.GuildMessages | DiscordGatewayIntent.GuildVoiceStates
-                    }); */
                     DiscordSocketClient DiscordClient;
-                    if (Host != null) { DiscordClient = new DiscordSocketClient(new DiscordSocketConfig() { Proxy = new AnarchyProxy() { Host = Host, Port = Port, Username = Username, Password = Password, Type = AnarchyProxyType.HTTP } }); }
+                    if (Host != null) { DiscordClient = new DiscordSocketClient(new DiscordSocketConfig() {Proxy = new AnarchyProxy() { Host = Host, Port = Port, Username = Username, Password = Password, Type = AnarchyProxyType.HTTP } }); }
                     else { DiscordClient = new DiscordSocketClient(); }
 
                     lock (Accounts)
@@ -425,14 +419,12 @@ namespace JRaidRewritten
                         if (Index >= Accounts.Count)
                             break;
 
-                        DiscordClient.Token = Accounts[Index];
+                        DiscordClient.Login(Accounts[Index]);
                         Index += 1;
                     }
-                    VoiceStateProperties VC = new VoiceStateProperties();
-                    VC.GuildId = GuildId;
-                    VC.ChannelId = ChannelId;
-                    VC.Muted = true;
-                    var session =  DiscordClient.JoinVoiceChannel(VC);
+ 
+                    var session =  await DiscordClient.JoinVoiceChannelAsync(new VoiceStateProperties() {GuildId = GuildId, ChannelId = ChannelId , Muted = true});
+                    session.Connect();
                     session.OnConnected += (s, a) =>
                     {
                         Logs.SafeAddItem(string.Format("Hijacking VC STATE"));
