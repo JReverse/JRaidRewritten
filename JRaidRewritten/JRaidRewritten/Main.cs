@@ -25,10 +25,10 @@ namespace JRaidRewritten
         private int Index;
 
         //Proxy Settings
-        private string Host;
-        private int Port;
-        private string Username;
-        private string Password;
+        private string Host { get; set; }
+        private int Port { get; set; }
+        private string Username { get; set; }
+        private string Password { get; set; }
         private int Delay { get; set; } = 555;
         public Main()
         {
@@ -128,7 +128,7 @@ namespace JRaidRewritten
                 {
                     DiscordClient DiscordClient;
                     if (Host != null) { DiscordClient = new DiscordClient(new DiscordConfig() { Proxy = new AnarchyProxy() { Host = Host, Port = Port, Username = Username, Password = Password, Type = AnarchyProxyType.HTTP } }); }
-                    DiscordClient = new DiscordClient();
+                    else { DiscordClient = new DiscordClient(); }
 
                     lock (Accounts)
                     {
@@ -162,7 +162,7 @@ namespace JRaidRewritten
                 {
                     DiscordClient DiscordClient;
                     if (Host != null) { DiscordClient = new DiscordClient(new DiscordConfig() { Proxy = new AnarchyProxy() { Host = Host, Port = Port, Username = Username, Password = Password, Type = AnarchyProxyType.HTTP } }); }
-                    DiscordClient = new DiscordClient();
+                    else { DiscordClient = new DiscordClient(); }
 
                     lock (Accounts)
                     {
@@ -275,7 +275,7 @@ namespace JRaidRewritten
                 {
                     DiscordClient DiscordClient;
                     if (Host != null) { DiscordClient = new DiscordClient(new DiscordConfig() { Proxy = new AnarchyProxy() { Host = Host, Port = Port, Username = Username, Password = Password, Type = AnarchyProxyType.HTTP } }); }
-                    DiscordClient = new DiscordClient();
+                    else { DiscordClient = new DiscordClient(); }
 
                     lock (Accounts)
                     {
@@ -309,7 +309,7 @@ namespace JRaidRewritten
                 {
                     DiscordClient DiscordClient;
                     if (Host != null) { DiscordClient = new DiscordClient(new DiscordConfig() { Proxy = new AnarchyProxy() { Host = Host, Port = Port, Username = Username, Password = Password, Type = AnarchyProxyType.HTTP } }); }
-                    DiscordClient = new DiscordClient();
+                    else { DiscordClient = new DiscordClient(); }
 
                     lock (Accounts)
                     {
@@ -343,7 +343,7 @@ namespace JRaidRewritten
                 {
                     DiscordClient DiscordClient;
                     if (Host != null) { DiscordClient = new DiscordClient(new DiscordConfig() { Proxy = new AnarchyProxy() { Host = Host, Port = Port, Username = Username, Password = Password, Type = AnarchyProxyType.HTTP } }); }
-                    DiscordClient = new DiscordClient();
+                    else { DiscordClient = new DiscordClient(); }          
 
                     lock (Accounts)
                     {
@@ -377,7 +377,7 @@ namespace JRaidRewritten
                 {
                     DiscordClient DiscordClient;
                     if (Host != null) { DiscordClient = new DiscordClient(new DiscordConfig() { Proxy = new AnarchyProxy() { Host = Host, Port = Port, Username = Username, Password = Password, Type = AnarchyProxyType.HTTP } }); }
-                    DiscordClient = new DiscordClient();
+                    else { DiscordClient = new DiscordClient(); }
 
                     lock (Accounts)
                     {
@@ -418,7 +418,7 @@ namespace JRaidRewritten
                     }); */
                     DiscordSocketClient DiscordClient;
                     if (Host != null) { DiscordClient = new DiscordSocketClient(new DiscordSocketConfig() { Proxy = new AnarchyProxy() { Host = Host, Port = Port, Username = Username, Password = Password, Type = AnarchyProxyType.HTTP } }); }
-                    DiscordClient = new DiscordSocketClient();
+                    else { DiscordClient = new DiscordSocketClient(); }
 
                     lock (Accounts)
                     {
