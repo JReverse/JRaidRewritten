@@ -411,8 +411,8 @@ namespace JRaidRewritten
                 try
                 {
                     DiscordSocketClient DiscordClient;
-                    if (Host != null) { DiscordClient = new DiscordSocketClient(new DiscordSocketConfig() {Proxy = new AnarchyProxy() { Host = Host, Port = Port, Username = Username, Password = Password, Type = AnarchyProxyType.HTTP } }); }
-                    else { DiscordClient = new DiscordSocketClient(); }
+                    if (Host != null) { DiscordClient = new DiscordSocketClient(new DiscordSocketConfig() { Cache = true, Proxy = new AnarchyProxy() { Host = Host, Port = Port, Username = Username, Password = Password, Type = AnarchyProxyType.HTTP } }); }
+                    else { DiscordClient = new DiscordSocketClient( new DiscordSocketConfig { Cache = true }); }
 
                     lock (Accounts)
                     {
@@ -422,20 +422,28 @@ namespace JRaidRewritten
                         DiscordClient.Login(Accounts[Index]);
                         Index += 1;
                     }
- 
-                    var session =  await DiscordClient.JoinVoiceChannelAsync(new VoiceStateProperties() {GuildId = GuildId, ChannelId = ChannelId , Muted = true});
+                    var prop = new VoiceStateProperties
+                    {
+                        GuildId = GuildId,
+                        ChannelId = ChannelId
+                    };
+                    var stream = DiscordClient.JoinVoiceChannelAsync(prop).Result;
+                    // var session =  await DiscordClient.JoinVoiceChannelAsync(new VoiceStateProperties() {GuildId = GuildId, ChannelId = ChannelId , Muted = true});
+                    DiscordVoiceSession newSession;
+                    var session = stream.CreateStream((VoiceChannel)newSession.Client.GetChannelAsync(ChannelId));
+                    
                     session.Connect();
                     session.OnConnected += (s, a) =>
                     {
                         Logs.SafeAddItem(string.Format("Hijacking VC STATE"));
-                        var stream = s.CreateStream(64000);
+                        var vstream = s.CreateStream(64000);
                         s.SetSpeakingState(DiscordSpeakingFlags.Soundshare);
                         Logs.SafeAddItem(string.Format("Exploited VC"));
 
                         while (true)
                         {
                             Logs.SafeAddItem(string.Format("Started Speaking"));
-                            stream.CopyFrom(File);
+                            vstream.CopyFrom(File);
                         }
                     };
                     await Task.Delay(Delay);
@@ -569,6 +577,11 @@ namespace JRaidRewritten
                     StartCallSpam(CallSpam.ThreadsAmount, CallSpam.UserID);
                 }
             }
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

@@ -39,11 +39,11 @@ namespace JRaidRewritten
             this.messageFloodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guildLeaverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dMFloodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vCSpammerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.callSpammerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.vCSpammerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.callSpammerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +61,7 @@ namespace JRaidRewritten
             this.toolStrip1.Size = new System.Drawing.Size(429, 25);
             this.toolStrip1.TabIndex = 8;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // toolStripSeparator1
             // 
@@ -128,6 +129,20 @@ namespace JRaidRewritten
             this.dMFloodToolStripMenuItem.Text = "DM Flood";
             this.dMFloodToolStripMenuItem.Click += new System.EventHandler(this.dMFloodToolStripMenuItem_Click);
             // 
+            // vCSpammerToolStripMenuItem
+            // 
+            this.vCSpammerToolStripMenuItem.Name = "vCSpammerToolStripMenuItem";
+            this.vCSpammerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vCSpammerToolStripMenuItem.Text = "VC Spammer";
+            this.vCSpammerToolStripMenuItem.Click += new System.EventHandler(this.vCSpammerToolStripMenuItem_Click);
+            // 
+            // callSpammerToolStripMenuItem
+            // 
+            this.callSpammerToolStripMenuItem.Name = "callSpammerToolStripMenuItem";
+            this.callSpammerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.callSpammerToolStripMenuItem.Text = "Call Spammer";
+            this.callSpammerToolStripMenuItem.Click += new System.EventHandler(this.callSpammerToolStripMenuItem_Click);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -152,25 +167,11 @@ namespace JRaidRewritten
             this.listBox1.FormattingEnabled = true;
             this.listBox1.HorizontalScrollbar = true;
             this.listBox1.Location = new System.Drawing.Point(0, 25);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
             this.listBox1.ScrollAlwaysVisible = true;
             this.listBox1.Size = new System.Drawing.Size(429, 203);
             this.listBox1.TabIndex = 10;
-            // 
-            // vCSpammerToolStripMenuItem
-            // 
-            this.vCSpammerToolStripMenuItem.Name = "vCSpammerToolStripMenuItem";
-            this.vCSpammerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.vCSpammerToolStripMenuItem.Text = "VC Spammer";
-            this.vCSpammerToolStripMenuItem.Click += new System.EventHandler(this.vCSpammerToolStripMenuItem_Click);
-            // 
-            // callSpammerToolStripMenuItem
-            // 
-            this.callSpammerToolStripMenuItem.Name = "callSpammerToolStripMenuItem";
-            this.callSpammerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.callSpammerToolStripMenuItem.Text = "Call Spammer";
-            this.callSpammerToolStripMenuItem.Click += new System.EventHandler(this.callSpammerToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -180,7 +181,7 @@ namespace JRaidRewritten
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Main";
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
