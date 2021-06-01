@@ -7,9 +7,7 @@ JRaidRewritten, Is a efficient & multithreaded discord raid tool.
 JRaidRewritten is powered by Anarchy This means for some reason if that gets patch this will be patched also.
 
 # Some features i plan to add
-- Call Spam
 - Invite Spam
-- VC Spammer
 - Avatar changer
 - Name Changer
 - DM Image/Video/File Spam
@@ -24,6 +22,8 @@ JRaidRewritten is powered by Anarchy This means for some reason if that gets pat
 - Guild Joiner
 - DM Spam
 - Message Spam
+- VC Spammer
+- Call Spam
 - Guild Leaver
 - MultiThreading
 
@@ -39,12 +39,11 @@ JRaidRewritten is powered by Anarchy This means for some reason if that gets pat
 - Guild Leaver [✔️]
 - Message Spam [✔️]
 - DM Spam [✔️]
-- Call Spam [❌]
+- VC Spammer [✔️]
+- Call Spam [✔️]
 - Invite Spam [❌]
-- VC Spammer [❌]
 - Avatar changer [❌]
 - Name Changer [❌]
-- Guild Leaver [❌]
 - DM Image/Video/File Spam [❌]
 - Message Image/Video/File Spam [❌]
 
